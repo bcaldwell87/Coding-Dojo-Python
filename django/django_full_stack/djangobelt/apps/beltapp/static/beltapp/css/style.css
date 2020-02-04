@@ -1,0 +1,21 @@
+.navbar{
+    margin-left:25px;
+    margin-top: 15px;
+    width: 960px;
+}
+.column0{
+    margin-left: 150px;
+    margin-top: -500px;
+}
+.column1{
+    margin-left: 250px;
+    margin-top: -500px;
+    text-align: left
+}
+.row{
+    height: 1000px;
+
+}
+.container-fluid {
+    margin-left:10px;
+   }

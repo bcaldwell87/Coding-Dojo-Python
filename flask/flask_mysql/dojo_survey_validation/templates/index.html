@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<body>
+    <h1>Survey</h1>
+    {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+    {% if messages %}                            <!-- check if there are any messages -->
+        {% for message in messages %}            <!-- loop through the messages -->
+            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+        <div class="form">
+            <form action='/result' method='post'>
+            Name: <input type='text' name='name'>
+            <div class ="location">
+                Dojo Location: <select name="location">
+                    <option value=""></option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Jose">San Jose</option>
+                    </select>
+            </div>
+            <div class ="language">
+                Favorite Language: <select name="language">
+                    <option value=""></option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Mean">Mean</option>
+                    </select>
+            <div class ="comments">
+                Comments:
+                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+                </textarea>
+            </div>
+            <input type='submit' value='Submit!'>
+            </form>
+        </div>
+</body>
+</html>
+
+
+<!-- <h1>Show Page</h1>
+<h3>Info Submitted:</h3>
+    <p>Name: {{ name_on_template }}</p>
+    <p>Email: {{ email_on_template }}</p> -->

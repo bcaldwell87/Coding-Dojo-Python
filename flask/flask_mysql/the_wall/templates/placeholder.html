@@ -1,0 +1,48 @@
+<div class="post-message">
+    <h3>Post a message</h3>
+    <form action="/submit" method='post'>
+        <textarea name="message" rows="5" placeholder=""></textarea>
+        <input type="hidden" name="submit-type" value="message">
+        <input id="post-message-button" class="button-1" type='submit' value='Submit' class="button">
+    </form>
+</div>
+<div id="wall">    
+    {% for message in wall_messages: %}
+        <div class="message-box">
+            <div class="tooltip">
+                <button type="button" class="content-toggle button-1" value="Hide">Hide</button>
+                <span class="tooltiptext">Click to hide or show comments</span>
+            </div>
+            <h3>{{message['poster']}} {{message['post_date']}}</h3>
+            {% if session['username'] == message['poster'] %}
+                <form action="/delete" method='post'>
+                    <input type="hidden" name="submit-type" value="message">
+                    <input type="hidden" name="message-id" value="{{ message['message_id'] }}">
+                    <input id="post-message-button" class="button-1" type='submit' value='Delete' class="button">
+                </form>
+            {% endif%}
+            <div class="content-box">
+                <p>{{message['message']}}</p>
+            
+                {% for comment in wall_comments: %}
+                    {% if comment['message_id'] == message['message_id'] %}
+                    <div class="comment-box">
+                        <h3>{{comment['commenter']}} {{comment['post_date']}}</h3>
+                        <p>{{comment['comment']}}</p>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                    
+                <div class="post-comment">
+                    <h3>Post a comment</h3>
+                    <form action="/submit" method='post'>
+                        <textarea name="comment" rows="5" placeholder=""></textarea>
+                        <input type="hidden" name="submit-type" value="comment">
+                        <input type="hidden" name="message-id" value="{{ message['message_id'] }}">
+                        <input id="post-message-button" class="button-1" type='submit' value='Submit' class="button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

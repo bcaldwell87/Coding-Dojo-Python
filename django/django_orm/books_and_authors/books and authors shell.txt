@@ -1,0 +1,741 @@
+Last login: Thu Jun 20 23:19:02 on ttys000
+MacBook-Pro:~ blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm 
+MacBook-Pro:django_orm blakecaldwell$ django-admin startproject books_and_authors
+-bash: django-admin: command not found
+MacBook-Pro:django_orm blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/my_environments 
+MacBook-Pro:my_environments blakecaldwell$ source djangoPy3Env/bin/activate
+(djangoPy3Env) MacBook-Pro:my_environments blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm 
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ django-admin startproject books_and_authors
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ cd books_and_authors/
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 18:41:24
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ mkdir apps
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ cd apps
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python ../manage.py startapp bookauthorapp
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd bookauthorapp/
+(djangoPy3Env) MacBook-Pro:bookauthorapp blakecaldwell$ touch urls.py
+(djangoPy3Env) MacBook-Pro:bookauthorapp blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors 
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x1104050d0>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/apps/bookauthorapp/models.py", line 16, in <module>
+    class Author(models.Model):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/apps/bookauthorapp/models.py", line 18, in Author
+    fans = models.ManyToManyField(User, related_name="favorite_books")
+NameError: name 'User' is not defined
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10ed8b400>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/books_and_authors/urls.py", line 21, in <module>
+    url(r'^', include('bookauthorapp.urls')),
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'bookauthorapp'
+^[[A
+
+
+exit()
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x102a80400>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/books_and_authors/urls.py", line 21, in <module>
+    url(r'^', include('bookauthorapp.urls'))
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'bookauthorapp'
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_sta/django/django_orm/books_and_authors 
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10d830400>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/books_and_authors/urls.py", line 21, in <module>
+    url(r'^', include('bookauthorapp.urls'))
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'bookauthorapp'
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10c1e7400>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/books_and_authors/urls.py", line 21, in <module>
+    url(r'^', include('bookauthorapp.urls'))
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'bookauthorapp'
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10fca4400>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/books_and_authors/urls.py", line 21, in <module>
+    url(r'^', include('apps.bookauthorapp.urls'))
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/apps/bookauthorapp/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/apps/bookauthorapp/views.py", line 2
+    from .models import Book Author
+                                  ^
+SyntaxError: invalid syntax
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:26:45
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:29:52
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:30:35
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:31:43
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:31:56
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:32:03
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 19:50:02
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ cd apps
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python manage.py makemigrations
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd \
+> cd /
+-bash: cd: cd: No such file or directory
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd ..\
+> /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors 
+-bash: cd: ../Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors: No such file or directory
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors 
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage,py makemigrations
+python: can't open file 'manage,py': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py makemigrations
+Migrations for 'bookauthorapp':
+  apps/bookauthorapp/migrations/0001_initial.py:
+    - Create model Author
+    - Create model Book
+    - Add field books to author
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, bookauthorapp, contenttypes, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying bookauthorapp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 22, 2019 - 20:00:42
+Django version 1.10, using settings 'books_and_authors.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ clear
+
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.bookauthorapp.models import *
+>>> Book.objects.create(title="c sharp", desc="a book about c sharp")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 572, in __repr__
+    u = six.text_type(self)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/apps/bookauthorapp/models.py", line 11, in __str__
+    return f"Name: {self.name} Email: {self.email}"
+AttributeError: 'Book' object has no attribute 'name'
+>>> Book.objects.create(title="c sharp", desc="a book about c sharp")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 572, in __repr__
+    u = six.text_type(self)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/books_and_authors/apps/bookauthorapp/models.py", line 11, in __str__
+    return f"Name: {self.title} Desc: {self.desc}"
+AttributeError: 'Book' object has no attribute 'name'
+>>> exit()
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage,py makemigrations
+python: can't open file 'manage,py': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py makemigrations
+No changes detected
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage,py migrate
+python: can't open file 'manage,py': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, bookauthorapp, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> Book.object.create(title="c sharp", desc="a book about c sharp")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Book' is not defined
+>>> from apps.bookauthorapp.models import *
+>>> Book.object.create(title="c sharp", desc="a book about c sharp")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'object'
+>>> from apps.bookauthorapp.models import *
+>>> Book.object.create(title="c sharp", desc="a book about c sharp")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'object'
+>>> Book.objecs.create(title="c sharp", desc="a book about c sharp")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'objecs'
+>>> Book.objects.create(title="c sharp", desc="a book about c sharp")
+<Book: Name: c sharp Desc: a book about c sharp>
+>>> Book.objects.create(title="Java", desc="a book about Java")
+<Book: Name: Java Desc: a book about Java>
+>>> Book.objects.create(title="Python", desc="a book about Java")
+<Book: Name: Python Desc: a book about Java>
+>>> Book.objects.create(title="PHP", desc="a book about PHP")
+<Book: Name: PHP Desc: a book about PHP>
+>>> Book.objects.create(title="Ruby", desc="a book about Ruby")
+<Book: Name: Ruby Desc: a book about Ruby>
+>>> Author.objects.create(first_name="Jane", last_name="Austen")
+<Author: Author object>
+>>> Author.objects.create(first_name="Emily", last_name="Dickinson")
+<Author: Author object>
+>>> Author.objects.create(first_name="Fyodor", last_name="Dostoevksy")
+<Author: Author object>
+>>> Author.objects.create(first_name="William", last_name="Shakespeare")
+<Author: Author object>
+>>> Author.objects.create(first_name="Lau", last_name="Tzu")
+<Author: Author object>
+>>> exit()
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py makemigrations
+You are trying to add a non-nullable field 'notes' to author without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> ()
+Migrations for 'bookauthorapp':
+  apps/bookauthorapp/migrations/0002_author_notes.py:
+    - Add field notes to author
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, bookauthorapp, contenttypes, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying bookauthorapp.0002_author_notes... OK
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py shells
+Unknown command: 'shells'
+Type 'manage.py help' for usage.
+(djangoPy3Env) MacBook-Pro:books_and_authors blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> c = Book.objects.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Book' is not defined
+>>> from apps.bookauthorapp.models import *
+>>> c = Book.objects.get(id=1)
+>>> c.title="C#"
+>>> c.save()
+>>> Book.object.all()Value
+  File "<console>", line 1
+    Book.object.all()Value
+                         ^
+SyntaxError: invalid syntax
+>>> Book.object.all()Values
+  File "<console>", line 1
+    Book.object.all()Values
+                          ^
+SyntaxError: invalid syntax
+>>> Book.object.all().values
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'object'
+>>> Book.objects.all().values
+<bound method QuerySet.values of <QuerySet [<Book: Title: C# Desc: a book about c sharp>, <Book: Title: c sharp Desc: a book about c sharp>, <Book: Title: c sharp Desc: a book about c sharp>, <Book: Title: Java Desc: a book about Java>, <Book: Title: Python Desc: a book about Java>, <Book: Title: PHP Desc: a book about PHP>, <Book: Title: Ruby Desc: a book about Ruby>]>>
+>>> c = Author.objects.get(id=4)
+>>> c.first_name="Bill"
+>>> c.save()
+>>> author_1 = Author.objects.get(id=1)
+>>> author_1
+<Author: Author object>
+>>> author_1 values
+  File "<console>", line 1
+    author_1 values
+                  ^
+SyntaxError: invalid syntax
+>>> author_1 values()
+  File "<console>", line 1
+    author_1 values()
+                  ^
+SyntaxError: invalid syntax
+>>> author_1 = Author.objects.get(id=1).values
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'values'
+>>> author_1 = Author.objects.get(id=1).value()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'value'
+>>> author_1 = Author.objects.get(id=1).value
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'value'
+>>> author_1 = Author.objects.get(id=1).values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'values'
+>>> author_1 = Author.objects.get(id=1).value
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'value'
+>>> author_1
+<Author: Author object>
+>>> author_1.values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'values'
+>>> values.author_1
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'values' is not defined
+>>> value.author_1
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'value' is not defined
+>>> author_1 get().values()
+  File "<console>", line 1
+    author_1 get().values()
+               ^
+SyntaxError: invalid syntax
+>>> author_!
+  File "<console>", line 1
+    author_!
+           ^
+SyntaxError: invalid syntax
+>>> author_1
+<Author: Author object>
+>>> author_1.authors.add(Book.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'authors'
+>>> author_1.authors.add(Book.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'authors'
+>>> author_1
+<Author: Author object>
+>>> Author.objects.all()
+<QuerySet [<Author: Author object>, <Author: Author object>, <Author: Author object>, <Author: Author object>, <Author: Author object>]>
+>>> Author.objects.all().values()
+<QuerySet [{'id': 1, 'first_name': 'Jane', 'last_name': 'Austen', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 29, 13, 407041, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 29, 13, 407095, tzinfo=<UTC>)}, {'id': 2, 'first_name': 'Emily', 'last_name': 'Dickinson', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 29, 44, 579000, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 29, 44, 579041, tzinfo=<UTC>)}, {'id': 3, 'first_name': 'Fyodor', 'last_name': 'Dostoevksy', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 30, 17, 584631, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 30, 17, 584684, tzinfo=<UTC>)}, {'id': 4, 'first_name': 'Bill', 'last_name': 'Shakespeare', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 30, 35, 567264, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 47, 0, 704516, tzinfo=<UTC>)}, {'id': 5, 'first_name': 'Lau', 'last_name': 'Tzu', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 30, 52, 230026, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 30, 52, 230079, tzinfo=<UTC>)}]>
+>>> author_1.books.add(Book.objects.get(id=1))
+>>> Author.objects.get(id=1).values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'values'
+>>> Author.objects.get(id=1).value()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'value'
+>>> Author.objects.all().values()
+<QuerySet [{'id': 1, 'first_name': 'Jane', 'last_name': 'Austen', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 29, 13, 407041, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 29, 13, 407095, tzinfo=<UTC>)}, {'id': 2, 'first_name': 'Emily', 'last_name': 'Dickinson', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 29, 44, 579000, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 29, 44, 579041, tzinfo=<UTC>)}, {'id': 3, 'first_name': 'Fyodor', 'last_name': 'Dostoevksy', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 30, 17, 584631, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 30, 17, 584684, tzinfo=<UTC>)}, {'id': 4, 'first_name': 'Bill', 'last_name': 'Shakespeare', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 30, 35, 567264, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 47, 0, 704516, tzinfo=<UTC>)}, {'id': 5, 'first_name': 'Lau', 'last_name': 'Tzu', 'notes': '()', 'created_at': datetime.datetime(2019, 6, 22, 20, 30, 52, 230026, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 30, 52, 230079, tzinfo=<UTC>)}]>
+>>> Book.objects,all().values()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: all() takes exactly one argument (0 given)
+>>> Book.objects.all().values()
+<QuerySet [{'id': 1, 'title': 'C#', 'desc': 'a book about c sharp', 'created_at': datetime.datetime(2019, 6, 22, 20, 11, 10, 518697, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 38, 47, 277285, tzinfo=<UTC>)}, {'id': 2, 'title': 'c sharp', 'desc': 'a book about c sharp', 'created_at': datetime.datetime(2019, 6, 22, 20, 12, 34, 501843, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 12, 34, 501896, tzinfo=<UTC>)}, {'id': 3, 'title': 'c sharp', 'desc': 'a book about c sharp', 'created_at': datetime.datetime(2019, 6, 22, 20, 17, 54, 160888, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 17, 54, 161215, tzinfo=<UTC>)}, {'id': 4, 'title': 'Java', 'desc': 'a book about Java', 'created_at': datetime.datetime(2019, 6, 22, 20, 18, 50, 403699, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 18, 50, 403733, tzinfo=<UTC>)}, {'id': 5, 'title': 'Python', 'desc': 'a book about Java', 'created_at': datetime.datetime(2019, 6, 22, 20, 19, 21, 529221, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 19, 21, 529257, tzinfo=<UTC>)}, {'id': 6, 'title': 'PHP', 'desc': 'a book about PHP', 'created_at': datetime.datetime(2019, 6, 22, 20, 19, 39, 798548, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 19, 39, 798591, tzinfo=<UTC>)}, {'id': 7, 'title': 'Ruby', 'desc': 'a book about Ruby', 'created_at': datetime.datetime(2019, 6, 22, 20, 19, 56, 41509, tzinfo=<UTC>), 'updated_at': datetime.datetime(2019, 6, 22, 20, 19, 56, 41563, tzinfo=<UTC>)}]>
+>>> author_1.books.add(Book.objects.get(id=2))
+>>> author_2
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'author_2' is not defined
+>>>  author_2 = Author.objects.get(id=2)
+  File "<console>", line 1
+    author_2 = Author.objects.get(id=2)
+    ^
+IndentationError: unexpected indent
+>>> author_2 = Author.objects.get(id=2)
+>>> author_2.books.add(Book.objects.get(id=1))
+>>> author_2.books.add(Book.objects.get(id=2))
+>>> author_2.books.add(Book.objects.get(id=3))
+>>> author_3 = Author.objects.get(id=3))
+  File "<console>", line 1
+    author_3 = Author.objects.get(id=3))
+                                       ^
+SyntaxError: invalid syntax
+>>> author_3 = Author.objects.get(id=3)
+>>> author_3.books.add(Book.objects.get(id=1))
+>>> author_3.books.add(Book.objects.get(id=2))
+>>> author_3.books.add(Book.objects.get(id=3))
+>>> author_3.books.add(Book.objects.get(id=4))
+>>> author_4 = Author.objects.get(id=4)
+>>> author_4.books.add(Book.objects.get(id=1))
+>>> author_4.books.add(Book.objects.get(id=2))
+>>> author_4.books.add(Book.objects.get(id=3))
+>>> author_4.books.add(Book.objects.get(id=4))
+>>> author_4.books.add(Book.objects.get(id=5))
+>>> third_book = Book.objects.get(id=3)
+>>> third_book.authors.all
+<bound method BaseManager.all of <django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x1051adfd0>>
+>>> third_book.books.all
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Book' object has no attribute 'books'
+>>> third_book.authors.all()
+<QuerySet [<Author: Author object>, <Author: Author object>, <Author: Author object>]>
+>>> third_book.authors.get(id=3).delete()
+(5, {'bookauthorapp.Author_books': 4, 'bookauthorapp.Author': 1})
+>>> author_5 = Author.objects.get(id=3)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+apps.bookauthorapp.models.DoesNotExist: Author matching query does not exist.
+>>> author_5 = Author.objects.get(id=5)
+>>> author_5.books.add(Book.objects.get(id=2))
+>>> author_3.Book.objects.get.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'Book'
+>>> author_3.books.get.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'function' object has no attribute 'all'
+>>> author_3.authors.get.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'authors'
+>>> author_3.objects.books.get.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 186, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via Author instances
+>>> author_3.books.all()
+<QuerySet []>
+>>> Author.objects.books.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Manager' object has no attribute 'books'
+>>> Author.objects.authors.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Manager' object has no attribute 'authors'
+>>> book_5 = Book.objects.get(id=5)
+>>> book_5.authors.all()
+<QuerySet [<Author: Author object>]>
+>>> 

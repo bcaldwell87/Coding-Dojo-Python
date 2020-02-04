@@ -1,0 +1,1266 @@
+Last login: Thu Jun 20 01:44:56 on ttys002
+MacBook-Pro:~ blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm 
+MacBook-Pro:django_orm blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/my_environments 
+MacBook-Pro:my_environments blakecaldwell$ source djangoPy3Env/bin/activate
+(djangoPy3Env) MacBook-Pro:my_environments blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm 
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ django-admin startproject users
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ cd users
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 04:21:17
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(djangoPy3Env) MacBook-Pro:users blakecaldwell$ mkdir apps
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ cd apps
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python ../manage.py startapp app_for_users
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd app_for_users
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ touch urls.py
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ /
+-bash: /: is a directory
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ ..
+-bash: ..: command not found
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ ../
+-bash: ../: is a directory
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ ..\
+> cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps 
+-bash: ..cd: command not found
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps 
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python ../manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 04:47:37
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[21/Jun/2019 04:48:59] "GET / HTTP/1.1" 200 325
+[21/Jun/2019 04:49:08] "GET /users/new HTTP/1.1" 200 325
+[21/Jun/2019 04:49:52] "GET /users/new HTTP/1.1" 200 325
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 04:50:32
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[21/Jun/2019 04:50:34] "GET /users/new HTTP/1.1" 200 325
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 04:51:12
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[21/Jun/2019 04:51:17] "GET /users/new HTTP/1.1" 200 285
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10d2cc2f0>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps/app_for_users/models.py", line 4
+    class User(models.Model):
+                            ^
+SyntaxError: unexpected EOF while parsing
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 04:57:58
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 05:01:19
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ clear
+
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/users 
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users 
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations
+Migrations for 'app_for_users':
+  apps/app_for_users/migrations/0001_initial.py:
+    - Create model User
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, app_for_users, auth, contenttypes, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying app_for_users.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.app_for_users.models import User
+>>> User.objects.all
+<bound method BaseManager.all of <django.db.models.manager.Manager object at 0x10f376be0>>
+>>> User.objects.all()
+<QuerySet []>
+>>> user1 = User(name="Blake", email="blake@blake.com")
+>>> user1
+<User: User object>
+>>> user1.save()
+>>> User.objects.all()
+<QuerySet [<User: User object>]>
+>>> User.objects.create(name="Hector", email="hector@email.com")
+<User: User object>
+>>> User.objects.all()
+<QuerySet [<User: User object>, <User: User object>]>
+>>> User.objects.create(name="Jesus", email="jesus@email.com")
+<User: User object>
+>>> User.objects.all()
+<QuerySet [<User: User object>, <User: User object>, <User: User object>]>
+>>> User.objects.get(id=1)
+<User: User object>
+>>>  
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> exit()
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.app_for_users.models import User
+>>> user.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'user' is not defined
+>>> User.objects.all()
+<QuerySet [<User: User object>, <User: User object>, <User: User object>]>
+>>> exit()
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.app_for_users.models import User
+>>> User.objects.all()
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: Hector Email: hector@email.com>, <User: Name: Jesus Email: jesus@email.com>]>
+>>> user1 = User.objects.get(id=1)
+>>> user1.say_hello()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'User' object has no attribute 'say_hello'
+>>> exit()
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.app_for_users,models import User
+  File "<console>", line 1
+    from apps.app_for_users,models import User
+                           ^
+SyntaxError: invalid syntax
+>>> from apps.app_for_users.model import User
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'apps.app_for_users.model'
+>>> from apps.app_for_users.models import User
+>>> exit()
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 21, 2019 - 07:11:29
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'user.say_hello'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps/app_for_users/views.py", line 9, in index
+    return render(request, "app_for_users/index.html")
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'user.say_hello', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[21/Jun/2019 07:11:44] "GET / HTTP/1.1" 500 134259
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps/app_for_users/views.py", line 9, in index
+    return render(request, "app_for_users/index.html")
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 603, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 703, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '()' from 'user.say_hello()'
+[21/Jun/2019 07:12:37] "GET / HTTP/1.1" 500 138188
+[21/Jun/2019 07:13:06] "GET / HTTP/1.1" 200 330
+[21/Jun/2019 07:13:28] "GET / HTTP/1.1" 200 330
+^C(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations
+No changes detected
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, app_for_users, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 21, 2019 - 07:14:17
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[21/Jun/2019 07:14:38] "GET / HTTP/1.1" 200 330
+[21/Jun/2019 07:14:41] "GET / HTTP/1.1" 200 330
+Not Found: /favicon.ico
+[21/Jun/2019 07:14:41] "GET /favicon.ico HTTP/1.1" 404 2244
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 21, 2019 - 07:15:41
+Django version 1.10, using settings 'users.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[21/Jun/2019 07:15:43] "GET / HTTP/1.1" 200 430
+[21/Jun/2019 07:16:12] "GET / HTTP/1.1" 200 451
+^C(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations
+Migrations for 'app_for_users':
+  apps/app_for_users/migrations/0002_book.py:
+    - Create model Book
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, app_for_users, auth, contenttypes, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying app_for_users.0002_book... OK
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.app_for_users.models import *
+>>> User.objects.all()
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: Hector Email: hector@email.com>, <User: Name: Jesus Email: jesus@email.com>]>
+>>> User.objects.first()
+<User: Name: Blake Email: blake@blake.com>
+>>> User.objects.last()
+<User: Name: Jesus Email: jesus@email.com>
+>>> User.objects.get(id=3)
+<User: Name: Jesus Email: jesus@email.com>
+>>> c = User.objexts.get(id=3)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'User' has no attribute 'objexts'
+>>> c = User.objects.get(id=3)
+>>> c.name = "veronica"
+>>> c.save()
+>>> User.objects.all()
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: Hector Email: hector@email.com>, <User: Name: veronica Email: jesus@email.com>]>
+>>> c = User.objects.get(id=2)
+>>> c.delete()
+(1, {'app_for_users.Book_fans': 0, 'app_for_users.User': 1})
+>>> User.objects.all()
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: veronica Email: jesus@email.com>]>
+>>> User.objects.all().order_by('name")
+  File "<console>", line 1
+    User.objects.all().order_by('name")
+                                      ^
+SyntaxError: EOL while scanning string literal
+>>> User.objects.all().order_by("name")
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: veronica Email: jesus@email.com>]>
+>>> 
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> exit ()
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm 
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ 
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ django-admin startproject dojos_and_ninjas_proj
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ cd dojos_and_ninjas_proj/
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 21, 2019 - 23:06:45
+Django version 1.10, using settings 'dojos_and_ninjas_proj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ mkdir apps
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ cd apps
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python ../manage.py startapp dojos_and_ninjas_app
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd dojos_and_ninjas_app/
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_app blakecaldwell$ touch.urls.py
+-bash: touch.urls.py: command not found
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_app blakecaldwell$ touch urls.py
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_app blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj 
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 04:42:54
+Django version 1.10, using settings 'dojos_and_ninjas_proj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/views.py", line 4, in index
+    return render(request, "dojos_and_ninjas_app.index.html")
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dojos_and_ninjas_app.index.html
+[22/Jun/2019 04:43:00] "GET / HTTP/1.1" 500 76295
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/views.py", line 4, in index
+    return render(request, "dojos_and_ninjas_app.index.html")
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dojos_and_ninjas_app.index.html
+[22/Jun/2019 04:46:01] "GET / HTTP/1.1" 500 76430
+^C(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ cd /Users/blakaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps 
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python manage.py runserver
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj 
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 04:51:18
+Django version 1.10, using settings 'dojos_and_ninjas_proj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/views.py", line 4, in index
+    return render(request, "dojos_and_ninjas_app.index.html")
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dojos_and_ninjas_app.index.html
+[22/Jun/2019 04:51:23] "GET / HTTP/1.1" 500 76409
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+June 22, 2019 - 04:53:36
+Django version 1.10, using settings 'dojos_and_ninjas_proj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[22/Jun/2019 04:53:38] "GET / HTTP/1.1" 200 274
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x103218268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4
+    class 
+         ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x103e49268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4
+    class Dojo(models.Model)
+                           ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10eb4a268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4
+    class Dojo(models.Model)
+                           ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x104951268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4
+    class Dojo(models.Model)
+                           ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x11030d268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 7
+    state = 
+           ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10ecc1268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 7
+    state = 
+           ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x1051bb268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 9
+    class Ninja(models.Model)
+                            ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10c591268>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 9
+    class Ninja(models.Model)
+                            ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10252cd08>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4, in <module>
+    class Dojo(models.Model):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 5, in Dojo
+    name = models.Charfield(max_length=255)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10510cd08>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4, in <module>
+    class Dojo(models.Model):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 5, in Dojo
+    name = models.Charfield(max_length=255)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10e669d08>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4, in <module>
+    class Dojo(models.Model):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 5, in Dojo
+    name = models.Charfield(max_length=255)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x1045dad08>
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4, in <module>
+    class Dojo(models.Model):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 5, in Dojo
+    name = models.Charfield(max_length=255)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'
+^C(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ . .
+-bash: .: .: is a directory
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ ..
+-bash: ..: command not found
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ \
+> 
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj 
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line
+    utility.execute()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 341, in execute
+    django.setup()
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 4, in <module>
+    class Dojo(models.Model):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/dojos_and_ninjas_proj/apps/dojos_and_ninjas_app/models.py", line 5, in Dojo
+    name = models.Charfield(max_length=255)
+AttributeError: module 'django.db.models' has no attribute 'Charfield'
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py makemigrations
+Migrations for 'dojos_and_ninjas_app':
+  apps/dojos_and_ninjas_app/migrations/0001_initial.py:
+    - Create model Dojo
+    - Create model Ninja
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.pymigrate
+python: can't open file 'manage.pymigrate': [Errno 2] No such file or directory
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojos_and_ninjas_app, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying dojos_and_ninjas_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.dojos_and_ninjas_app.models import *
+>>> Dojo.objects.create(name="Online" city="anywhere" state="OK")
+  File "<console>", line 1
+    Dojo.objects.create(name="Online" city="anywhere" state="OK")
+                                         ^
+SyntaxError: invalid syntax
+>>> Dojo.objects.create(name="Online", city="anywhere", state="OK")
+<Dojo: Dojo object>
+>>> Dojo.objects.create(name="Dallas", city="DAllas", state="TX")
+<Dojo: Dojo object>
+>>> Dojo.objects.create(name="Tulsa", city="Tulsa", state="OK")
+<Dojo: Dojo object>
+>>> Dojo.objects.all()
+<QuerySet [<Dojo: Dojo object>, <Dojo: Dojo object>, <Dojo: Dojo object>]>
+>>> c.delete()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'c' is not defined
+>>> delete()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'delete' is not defined
+>>> c = Dojo.objects.all()
+>>> c.delete()
+(3, {'dojos_and_ninjas_app.Ninja': 0, 'dojos_and_ninjas_app.Dojo': 3})
+>>> Dojo.objects.create(name="Tulsa", city="Tulsa", state="OK")
+<Dojo: Dojo object>
+>>> Dojo.objects.create(name="Seattle", city="Seattle", state="WA")
+<Dojo: Dojo object>
+>>> Dojo.objects.create(name="Tulsa", city="Tulsa", state="OK")
+<Dojo: Dojo object>
+>>> bc = Ninja.objects.create(first_name="Blake, last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+  File "<console>", line 1
+    bc = Ninja.objects.create(first_name="Blake, last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+                                                                   ^
+SyntaxError: invalid syntax
+>>> bc = Ninja.objects.create(first_name="Blake, last_name="Caldwell" dojo=Dojo.objects.get(id=1))
+  File "<console>", line 1
+    bc = Ninja.objects.create(first_name="Blake, last_name="Caldwell" dojo=Dojo.objects.get(id=1))
+                                                                   ^
+SyntaxError: invalid syntax
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell" dojo=Dojo.objects.get(id=1))
+  File "<console>", line 1
+    bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell" dojo=Dojo.objects.get(id=1))
+                                                                          ^
+SyntaxError: invalid syntax
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell" dojo =Dojo.objects.get(id=1))
+  File "<console>", line 1
+    bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell" dojo =Dojo.objects.get(id=1))
+                                                                          ^
+SyntaxError: invalid syntax
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo =Dojo.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+apps.dojos_and_ninjas_app.models.DoesNotExist: Dojo matching query does not exist.
+>>> exit()
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Ninja' is not defined
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Ninja' is not defined
+>>> exit()
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py makemigrations
+No changes detected
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojos_and_ninjas_app, sessions
+Running migrations:
+  No migrations to apply.
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> Dojo.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Dojo' is not defined
+>>> Dojo.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Dojo' is not defined
+>>> Dojo.objects.create(name="Tulsa", city="Tulsa", state="OK")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Dojo' is not defined
+>>> from models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'models'
+>>> from apps.dojos_and_ninjas_app import *
+>>> Dojo.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Dojo' is not defined
+>>> Dojo.objects.create(name="Tulsa", city="Tulsa", state="OK")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Dojo' is not defined
+>>> from apps.dojos_and_ninjas_app.models  import *
+>>> Dojo.objects.all()
+<QuerySet [<Dojo: Dojo object>, <Dojo: Dojo object>, <Dojo: Dojo object>]>
+>>> bc = Ninja.objects.create(first_name"Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+  File "<console>", line 1
+    bc = Ninja.objects.create(first_name"Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+                                              ^
+SyntaxError: invalid syntax
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+apps.dojos_and_ninjas_app.models.DoesNotExist: Dojo matching query does not exist.
+>>> dojo = Dojo.objects.create(name="Seattle", city="Seattle", state="WA")
+>>> dojo.id
+7
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=dojo)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 397, in create
+    obj = self.model(**kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 555, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'dojo' is an invalid keyword argument for this function
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+apps.dojos_and_ninjas_app.models.DoesNotExist: Dojo matching query does not exist.
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=Dojo.objects.get(id=1))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+apps.dojos_and_ninjas_app.models.DoesNotExist: Dojo matching query does not exist.
+>>> this_dojo = Dojo.objects.get(id=7)
+>>> bc = Ninja.objects.create(first
+... exit()
+  File "<console>", line 2
+    exit()
+       ^
+SyntaxError: invalid syntax
+>>> exit()
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py makemigrations
+Did you rename ninja.dojo_id to ninja.dojo (a ForeignKey)? [y/N] y
+Migrations for 'dojos_and_ninjas_app':
+  apps/dojos_and_ninjas_app/migrations/0002_auto_20190622_0745.py:
+    - Rename field dojo_id on ninja to dojo
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojos_and_ninjas_app, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying dojos_and_ninjas_app.0002_auto_20190622_0745... OK
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.dojos_and_ninjas_app.models *
+  File "<console>", line 1
+    from apps.dojos_and_ninjas_app.models *
+                                          ^
+SyntaxError: invalid syntax
+>>> from apps.dojos_and_ninjas_app.model *
+  File "<console>", line 1
+    from apps.dojos_and_ninjas_app.model *
+                                         ^
+SyntaxError: invalid syntax
+>>> from apps.dojos_and_ninjas_app.model import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'apps.dojos_and_ninjas_app.model'
+>>> from apps.dojos_and_ninjas_app.models import *
+>>> Dojo.objects.all()
+<QuerySet [<Dojo: Dojo object>, <Dojo: Dojo object>, <Dojo: Dojo object>, <Dojo: Dojo object>]>
+>>> tulsa = Dojo.objects.create(name="Dojo1", city="Oklahoma", state="OK")
+>>> tulsa.id
+8
+>>> tulsa.name
+'Dojo1'
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell")
+Traceback (most recent call last):
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: dojos_and_ninjas_app_ninja.dojo_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 1043, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: dojos_and_ninjas_app_ninja.dojo_id
+>>> bc = Ninja.objects.create(first_name="Blake", last_name="Caldwell", dojo=tulsa)
+>>> bc.id
+1
+>>> bc.first_name
+'Blake'
+>>> ac = Ninja.objects.create(first_name="Jon", last_name="doe", dojo=tulsa)
+>>> cc = Ninja.objects.create(first_name="Jon", last_name="doe", dojo=tulsa)
+>>> cc.id
+3
+>>> cc = Ninja.objects.create(first_name="Jon", last_name="doe", d)
+  File "<console>", line 1
+SyntaxError: positional argument follows keyword argument
+>>> Ninja.objects.all()
+<QuerySet [<Ninja: Ninja object>, <Ninja: Ninja object>, <Ninja: Ninja object>]>
+>>> Ninja.objects.filter(dojo=Dojo.objects.get(id=8))
+<QuerySet [<Ninja: Ninja object>, <Ninja: Ninja object>, <Ninja: Ninja object>]>
+>>> exit()
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py makemigrations
+You are trying to add a non-nullable field 'desc' to dojo without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> timezone.now
+Migrations for 'dojos_and_ninjas_app':
+  apps/dojos_and_ninjas_app/migrations/0003_dojo_desc.py:
+    - Add field desc to dojo
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojos_and_ninjas_app, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying dojos_and_ninjas_app.0003_dojo_desc... OK
+(djangoPy3Env) MacBook-Pro:dojos_and_ninjas_proj blakecaldwell$ python manage.py shell
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) 
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.dojos_and_ninjas_app.models import *
+>>> Dojo.object.create(name="eagdag", city="dagaega", state="OK", desc="AGAEGAEGHAERHGAEGVBADGFAERHA")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Dojo' has no attribute 'object'
+>>> Dojo.objects.create(name="eagdag", city="dagaega", state="OK", desc="AGAEGAEGHAERHGAEGVBADGFAERHA")
+<Dojo: Dojo object>
+>>> 

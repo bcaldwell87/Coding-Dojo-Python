@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Login and Registration</title>
+
+  </head>
+  <body class= "bg-dark">
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='bimage.pmg') }}" width="25" height="25" class="d-inline-block align-top" alt="">M3SS4GE
+        </a>
+        <h3>Taking chat to new heights!</h3>
+      </nav>
+    <div class= "container-fluid">
+        <div class="row">
+            <div class= "column0">
+                <li class="list-group-item list-group-item-dark bg-primary">
+                <h6>New Here?</h6>
+                <h2>Register!</h2>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                    <form action="/register" method="post">
+                        <input type="text" name="name" placeholder="Name">
+                        <br>
+                        <br>
+                        <input type="text" name="email" placeholder="Email">
+                        <br>
+                        <br>
+                        <input type="password" name="password" placeholder="Password">
+                        <br>
+                        <br>
+                        <input type="password" name="confirm_password" placeholder="Confirm Password">
+                        <br>
+                        <br>
+                        <input type="submit" value="Register!">
+                        <br>
+                        <br>
+                    </form>
+                </li>
+            </div>
+            <div class= "column1">
+                <li class="list-group-item list-group-item-dark bg-primary">
+                <h6>Already a user?</h6>
+                <h2>Login!</h2>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <form action="/login" method="post">
+                    <input type="text" name="email" placeholder="Email">
+                    <br>
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                    <br>
+                    <br>
+                    <input type="submit" value="Login!">
+                    <br>
+                    <br>
+                </form>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

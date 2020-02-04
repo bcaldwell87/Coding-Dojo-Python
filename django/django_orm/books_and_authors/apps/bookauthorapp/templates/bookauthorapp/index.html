@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a book</h1>
+    <form action="/addbook" method="post">
+        {% csrf_token %}
+        <p>Title:   <input type="text" name="title"></p>
+        <p>Description: <textarea name="desc" rows="5" cols="30"></textarea></p>
+        <p><input type="submit" value= "Add"></p>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID:</th>
+            <th>Book:</th>
+            <th>Action:</th>
+        </tr>
+        <tr>
+            <td>
+                {% for book in all_books %}
+                    <p> {{ book.id }} </p>
+                {% endfor %}
+            </td>
+            <td>
+                {% for book in all_books %}
+                    <p> {{ book.title }} </p>
+                {% endfor %}
+            </td>
+            <td>                
+                {% for book in all_books %}
+                    <p><a href="/viewbook/{{ book.id }}">View</a></p>
+                {% endfor %}</td>
+        </tr>
+    </table>
+    <a href="/authors">Go to Authors</a>
+</body>
+</html>

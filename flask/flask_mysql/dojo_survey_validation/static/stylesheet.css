@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.form {
+    width: 800px;
+    margin: 0px auto;
+    background-color: gray;
+    display: inline;
+}

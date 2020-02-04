@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Jobs</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'beltapp/css/style1.css' %}">
+  </head>
+    <body class= "bg-dark">
+        <nav class="navbar navbar-dark bg-primary">
+            <h3>Welcome, {{ request.session.user_first_name }}!</h3>
+            <a class="navbar-brand" href="/logout"><u>Logout</u></a>
+        </nav>
+        <nav class="navbar1 navbar-dark bg-primary">
+            <a href="/jobs/new">
+                <button type="submit">Make a Wish!</button>
+            </a>
+        </nav>
+        <div class="wrapper bg-light">
+            <div class="row0">
+                    <h2>Your wish list:</h2>
+                    <table style="width:100%" border="1|0">
+                        <tr>
+                            <th>Job</th>
+                            <th>Location</th>
+                            <th>Actions</th>
+                        </tr>
+                        {% for job in all_jobs %}
+                        <tr>
+                           <td>{{ job.title }}</td>
+                           <td>{{ job.location }}</td>
+                           <td><a href="/jobs/{{ job.id }}">View</a> | <a href="/jobs/{{ job.id }}/add">Add</a>{% if job.uploader_id == request.session.user_id %} | <a href="/jobs/{{ job.id }}/add">Remove</a> | <a href="/jobs/{{ job.id }}/edit">Edit</a> </td>
+                           {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

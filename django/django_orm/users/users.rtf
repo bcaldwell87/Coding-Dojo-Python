@@ -1,0 +1,417 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red47\green255\blue18;\red0\green0\blue0;\red180\green36\blue25;
+\red46\green174\blue187;\red0\green255\blue0;\red47\green180\blue29;\red200\green20\blue201;\red159\green160\blue28;
+}
+{\*\expandedcolortbl;;\cssrgb\c15686\c99608\c7843;\csgray\c0\c90000;\cssrgb\c76410\c21699\c12524;
+\cssrgb\c20198\c73241\c78251;\csgenericrgb\c0\c100000\c0;\cssrgb\c20239\c73899\c14948;\cssrgb\c83397\c23076\c82665;\cssrgb\c68469\c68013\c14209;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \CocoaLigature0 Last login: Thu Jun 20 01:44:56 on ttys002\
+MacBook-Pro:~ blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm \
+MacBook-Pro:django_orm blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/my_environments \
+MacBook-Pro:my_environments blakecaldwell$ source djangoPy3Env/bin/activate\
+(djangoPy3Env) MacBook-Pro:my_environments blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm \
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ django-admin startproject users\
+(djangoPy3Env) MacBook-Pro:django_orm blakecaldwell$ cd users\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf4 You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf4 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+June 21, 2019 - 04:21:17\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^C(djangoPy3Env) MacBook-Pro:users blakecaldwell$ mkdir apps\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ cd apps\
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python ../manage.py startapp app_for_users\
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd app_for_users\
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ touch urls.py\
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ /\
+-bash: /: is a directory\
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ ..\
+-bash: ..: command not found\
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ ../\
+-bash: ../: is a directory\
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ ..\\\
+> cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps \
+-bash: ..cd: command not found\
+(djangoPy3Env) MacBook-Pro:app_for_users blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps \
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ python ../manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf4 You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf4 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+June 21, 2019 - 04:47:37\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[21/Jun/2019 04:48:59] "GET / HTTP/1.1" 200 325\
+[21/Jun/2019 04:49:08] "GET /users/new HTTP/1.1" 200 325\
+[21/Jun/2019 04:49:52] "GET /users/new HTTP/1.1" 200 325\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf4 You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf4 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+June 21, 2019 - 04:50:32\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[21/Jun/2019 04:50:34] "GET /users/new HTTP/1.1" 200 325\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf4 You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf4 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+June 21, 2019 - 04:51:12\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[21/Jun/2019 04:51:17] "GET /users/new HTTP/1.1" 200 285\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10d2cc2f0>\
+Traceback (most recent call last):\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps/app_for_users/models.py", line 4\
+    class User(models.Model):\
+                            ^\
+SyntaxError: unexpected EOF while parsing\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf4 You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf4 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+June 21, 2019 - 04:57:58\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf4 You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf4 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+June 21, 2019 - 05:01:19\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^C(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ clear\
+\
+(djangoPy3Env) MacBook-Pro:apps blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/users \
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ cd /Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users \
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations\
+\cf5 Migrations for 'app_for_users':\cf2 \
+  \cf6 apps/app_for_users/migrations/0001_initial.py\cf2 :\
+    - Create model User\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py migrate\
+\cf5 Operations to perform:\cf2 \
+\cf6   Apply all migrations: \cf2 admin, app_for_users, auth, contenttypes, sessions\
+\cf5 Running migrations:\cf2 \
+  Rendering model states...\cf7  DONE\cf2 \
+  Applying contenttypes.0001_initial...\cf7  OK\cf2 \
+  Applying auth.0001_initial...\cf7  OK\cf2 \
+  Applying admin.0001_initial...\cf7  OK\cf2 \
+  Applying admin.0002_logentry_remove_auto_add...\cf7  OK\cf2 \
+  Applying app_for_users.0001_initial...\cf7  OK\cf2 \
+  Applying contenttypes.0002_remove_content_type_name...\cf7  OK\cf2 \
+  Applying auth.0002_alter_permission_name_max_length...\cf7  OK\cf2 \
+  Applying auth.0003_alter_user_email_max_length...\cf7  OK\cf2 \
+  Applying auth.0004_alter_user_username_opts...\cf7  OK\cf2 \
+  Applying auth.0005_alter_user_last_login_null...\cf7  OK\cf2 \
+  Applying auth.0006_require_contenttypes_0002...\cf7  OK\cf2 \
+  Applying auth.0007_alter_validators_add_error_messages...\cf7  OK\cf2 \
+  Applying auth.0008_alter_user_username_max_length...\cf7  OK\cf2 \
+  Applying sessions.0001_initial...\cf7  OK\cf2 \
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell\
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) \
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.app_for_users.models import User\
+>>> User.objects.all\
+<bound method BaseManager.all of <django.db.models.manager.Manager object at 0x10f376be0>>\
+>>> User.objects.all()\
+<QuerySet []>\
+>>> user1 = User(name="Blake", email="blake@blake.com")\
+>>> user1\
+<User: User object>\
+>>> user1.save()\
+>>> User.objects.all()\
+<QuerySet [<User: User object>]>\
+>>> User.objects.create(name="Hector", email="hector@email.com")\
+<User: User object>\
+>>> User.objects.all()\
+<QuerySet [<User: User object>, <User: User object>]>\
+>>> User.objects.create(name="Jesus", email="jesus@email.com")\
+<User: User object>\
+>>> User.objects.all()\
+<QuerySet [<User: User object>, <User: User object>, <User: User object>]>\
+>>> User.objects.get(id=1)\
+<User: User object>\
+>>>  \
+KeyboardInterrupt\
+>>> \
+KeyboardInterrupt\
+>>> exit()\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell\
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) \
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.app_for_users.models import User\
+>>> user.objects.all()\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'user' is not defined\
+>>> User.objects.all()\
+<QuerySet [<User: User object>, <User: User object>, <User: User object>]>\
+>>> exit()\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell\
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) \
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.app_for_users.models import User\
+>>> User.objects.all()\
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: Hector Email: hector@email.com>, <User: Name: Jesus Email: jesus@email.com>]>\
+>>> user1 = User.objects.get(id=1)\
+>>> user1.say_hello()\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+AttributeError: 'User' object has no attribute 'say_hello'\
+>>> exit()\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell\
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) \
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.app_for_users,models import User\
+  File "<console>", line 1\
+    from apps.app_for_users,models import User\
+                           ^\
+SyntaxError: invalid syntax\
+>>> from apps.app_for_users.model import User\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+ModuleNotFoundError: No module named 'apps.app_for_users.model'\
+>>> from apps.app_for_users.models import User\
+>>> exit()\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+June 21, 2019 - 07:11:29\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+Internal Server Error: /\
+Traceback (most recent call last):\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 510, in parse\
+    compile_func = self.tags[command]\
+KeyError: 'user.say_hello'\
+\
+During handling of the above exception, another exception occurred:\
+\
+Traceback (most recent call last):\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner\
+    response = get_response(request)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response\
+    response = self.process_exception_by_middleware(e, request)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps/app_for_users/views.py", line 9, in index\
+    return render(request, "app_for_users/index.html")\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string\
+    template = get_template(template_name, using=using)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 21, in get_template\
+    return engine.get_template(template_name)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/backends/django.py", line 39, in get_template\
+    return Template(self.engine.get_template(template_name), self)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 160, in get_template\
+    template, origin = self.find_template(template_name)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 134, in find_template\
+    name, template_dirs=dirs, skip=skip,\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loaders/base.py", line 44, in get_template\
+    contents, origin, origin.template_name, self.engine,\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 191, in __init__\
+    self.nodelist = self.compile_nodelist()\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 233, in compile_nodelist\
+    return parser.parse()\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 518, in parse\
+    raise self.error(token, e)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 516, in parse\
+    compiled_result = compile_func(self, token)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/defaulttags.py", line 811, in do_for\
+    nodelist_loop = parser.parse(('empty', 'endfor',))\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 512, in parse\
+    self.invalid_block_tag(token, command, parse_until)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 568, in invalid_block_tag\
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),\
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'user.say_hello', expected 'empty' or 'endfor'. Did you forget to register or load this tag?\
+[21/Jun/2019 07:11:44] \cf8 "GET / HTTP/1.1" 500 134259\cf2 \
+Internal Server Error: /\
+Traceback (most recent call last):\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner\
+    response = get_response(request)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response\
+    response = self.process_exception_by_middleware(e, request)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/django/django_orm/users/apps/app_for_users/views.py", line 9, in index\
+    return render(request, "app_for_users/index.html")\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string\
+    template = get_template(template_name, using=using)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 21, in get_template\
+    return engine.get_template(template_name)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/backends/django.py", line 39, in get_template\
+    return Template(self.engine.get_template(template_name), self)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 160, in get_template\
+    template, origin = self.find_template(template_name)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/engine.py", line 134, in find_template\
+    name, template_dirs=dirs, skip=skip,\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loaders/base.py", line 44, in get_template\
+    contents, origin, origin.template_name, self.engine,\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 191, in __init__\
+    self.nodelist = self.compile_nodelist()\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 233, in compile_nodelist\
+    return parser.parse()\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 518, in parse\
+    raise self.error(token, e)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 516, in parse\
+    compiled_result = compile_func(self, token)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/defaulttags.py", line 811, in do_for\
+    nodelist_loop = parser.parse(('empty', 'endfor',))\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 489, in parse\
+    raise self.error(token, e)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 487, in parse\
+    filter_expression = self.compile_filter(token.contents)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 603, in compile_filter\
+    return FilterExpression(token, self)\
+  File "/Users/blakecaldwell/Desktop/Coding/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/base.py", line 703, in __init__\
+    "from '%s'" % (token[upto:], token))\
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '()' from 'user.say_hello()'\
+[21/Jun/2019 07:12:37] \cf8 "GET / HTTP/1.1" 500 138188\cf2 \
+[21/Jun/2019 07:13:06] "GET / HTTP/1.1" 200 330\
+[21/Jun/2019 07:13:28] "GET / HTTP/1.1" 200 330\
+^C(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations\
+No changes detected\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py migrate\
+\cf5 Operations to perform:\cf2 \
+\cf6   Apply all migrations: \cf2 admin, app_for_users, auth, contenttypes, sessions\
+\cf5 Running migrations:\cf2 \
+  No migrations to apply.\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+June 21, 2019 - 07:14:17\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[21/Jun/2019 07:14:38] "GET / HTTP/1.1" 200 330\
+[21/Jun/2019 07:14:41] "GET / HTTP/1.1" 200 330\
+Not Found: /favicon.ico\
+[21/Jun/2019 07:14:41] \cf9 "GET /favicon.ico HTTP/1.1" 404 2244\cf2 \
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+June 21, 2019 - 07:15:41\
+Django version 1.10, using settings 'users.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[21/Jun/2019 07:15:43] "GET / HTTP/1.1" 200 430\
+[21/Jun/2019 07:16:12] "GET / HTTP/1.1" 200 451\
+^C(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py makemigrations\
+\cf5 Migrations for 'app_for_users':\cf2 \
+  \cf6 apps/app_for_users/migrations/0002_book.py\cf2 :\
+    - Create model Book\
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py migrate\
+\cf5 Operations to perform:\cf2 \
+\cf6   Apply all migrations: \cf2 admin, app_for_users, auth, contenttypes, sessions\
+\cf5 Running migrations:\cf2 \
+  Rendering model states...\cf7  DONE\cf2 \
+  Applying app_for_users.0002_book...\cf7  OK\cf2 \
+(djangoPy3Env) MacBook-Pro:users blakecaldwell$ python manage.py shell\
+Python 3.7.3 (default, Mar 27 2019, 09:23:15) \
+[Clang 10.0.1 (clang-1001.0.46.3)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.app_for_users.models import *\
+>>> User.objects.all()\
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: Hector Email: hector@email.com>, <User: Name: Jesus Email: jesus@email.com>]>\
+>>> User.objects.first()\
+<User: Name: Blake Email: blake@blake.com>\
+>>> User.objects.last()\
+<User: Name: Jesus Email: jesus@email.com>\
+>>> User.objects.get(id=3)\
+<User: Name: Jesus Email: jesus@email.com>\
+>>> c = User.objexts.get(id=3)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+AttributeError: type object 'User' has no attribute 'objexts'\
+>>> c = User.objects.get(id=3)\
+>>> c.name = "veronica"\
+>>> c.save()\
+>>> User.objects.all()\
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: Hector Email: hector@email.com>, <User: Name: veronica Email: jesus@email.com>]>\
+>>> c = User.objects.get(id=2)\
+>>> c.delete()\
+(1, \{'app_for_users.Book_fans': 0, 'app_for_users.User': 1\})\
+>>> User.objects.all()\
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: veronica Email: jesus@email.com>]>\
+>>> User.objects.all().order_by('name")\
+  File "<console>", line 1\
+    User.objects.all().order_by('name")\
+                                      ^\
+SyntaxError: EOL while scanning string literal\
+>>> User.objects.all().order_by("name")\
+<QuerySet [<User: Name: Blake Email: blake@blake.com>, <User: Name: veronica Email: jesus@email.com>]>\
+>>> \
+}

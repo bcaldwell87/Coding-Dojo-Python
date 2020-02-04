@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<body>
+    <h1>Survey</h1>
+        <div class="form">
+            <form action='/result' method='post'>
+            Name: <input type='text' name='name'>
+            <div class ="location">
+                Dojo Location: <select name="location">
+                    <option value="Dallas">Dallas</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Jose">San Jose</option>
+                    </select>
+            </div>
+            <div class ="language">
+                Favorite Language: <select name="language">
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Mean">Mean</option>
+                    </select>
+            <div class ="comments">
+                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+                    Comments(optional)
+                </textarea>
+            </div>
+            <input type='submit' value='Submit!'>
+            </form>
+        </div>
+</body>
+</html>
+
+
+<!-- <h1>Show Page</h1>
+<h3>Info Submitted:</h3>
+    <p>Name: {{ name_on_template }}</p>
+    <p>Email: {{ email_on_template }}</p> -->

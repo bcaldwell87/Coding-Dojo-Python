@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Flask</title>
+</head>
+<body>
+        <h1>All the PETS!</h1>
+        {% for one_pet in all_pets %}
+            <tr>
+                <th>ID: {{one_pet["idpets"]}}</th>
+                <th>Name: {{one_pet["name"]}}</th>
+                <th>Type: {{one_pet["type"]}}</th>
+            </tr>
+        {% endfor %}
+
+<h1>Add a PET!</h1>
+<form action="/create_pet" method="POST">
+    <p>Name: <input type="text" name="name"></p>
+    <p>Type: <input type="text" name="type"></p>
+    <input type="submit" value="Add Pet">
+</form>
+</body>
+</html>

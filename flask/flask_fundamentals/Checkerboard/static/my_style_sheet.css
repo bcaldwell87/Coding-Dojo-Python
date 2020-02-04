@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#container {
+    width: 800px;
+    margin: 0px auto;
+    /* background-color: gray; */
+}
+.row {
+    width: 430px;
+}
+.row div {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.red {
+    background-color: red;
+}
+.black {
+    background-color: black;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+            <h1>Enter your email address</h1>
+            <div class="messages-error">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{message}}<br>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>  
+            <form id="myForm" action='/process', method='post'>
+                <div class="form-item">
+                    <label class="label-item">Email Address:</label>
+                    <input class="input-item" type='text' name='email'>
+                </div>
+                <input type='submit' name="formAction" value='Add Email' class="button">
+                <input type='submit' name="formAction" value='Delete Email' class="button">
+            </form>
+            <br>
+            <form action='/show', method='get'>
+                <input type='submit' value='View Current Users' class="button">
+            </form>
+        </div>
+</body>
+</html>

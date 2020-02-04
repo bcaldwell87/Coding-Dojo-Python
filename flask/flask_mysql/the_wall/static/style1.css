@@ -1,0 +1,22 @@
+.navbar{
+    margin: 15px 15px 0px 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+}
+.logout{
+    margin: 20px 15px 0px 0px;
+    text-align: right;
+}
+
+.container{
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+}
+.column0{
+    padding: 50px;
+}
+
+.column1{
+    margin-left: 250px;
+    padding: 50px;
+}

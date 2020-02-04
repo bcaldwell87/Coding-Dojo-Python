@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Favorite Books</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/style1.css' %}">
+  </head>
+    <body class= "bg-dark">
+        <nav class="navbar navbar-dark bg-primary">
+            <h3>Welcome, {{ request.session.user_first_name }}!</h3>
+            <a class="navbar-brand" href="/logout"><u>Logout</u></a>
+        </nav>
+        <div class="wrapper bg-light">
+            <div class="row">
+                <div class="column0">
+                    <h2>{{ book.title }}</h2>
+                    <p><b>Added by:</b> {{ book.uploader.first_name }} {{ book.uploader.last_name }}</p>
+                    <p><b>Added on:</b> {{ book.created_at }}</p>
+                    <p><b>Last updated:</b> {{ book.updated_at }}</p>
+                    <p><b>Description:</b> {{ book.desc }}</p>
+                </div>
+                <div class="column1">
+                    <h2>Users Who Like This Book</h2>
+                        <ul>
+                            {% for user in book.fans.all %}
+                            <li>{{ user.first_name }} {{ user.last_name }}</li>
+                            {% endfor %}
+                        </ul>
+                        <ul>
+                            <p>
+                                <a href="/books/{{ book.id }}/addfavorite">Add to Favorites</a>
+                            </p>
+                        </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

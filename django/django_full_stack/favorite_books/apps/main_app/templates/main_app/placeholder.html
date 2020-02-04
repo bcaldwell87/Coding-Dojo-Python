@@ -1,0 +1,10 @@
+def create_book(request):
+    print(request.POST)
+    current_user = User.objects.get(id=request.session['user_id'])
+    book_obj = Book.objects.create(
+        title=request.POST['title'],
+        desc=request.POST['desc'],
+        uploader=current_user
+    )
+    book_obj.fans.add(current_user)
+    return redirect('/books')
